@@ -3,10 +3,10 @@
 require_once '../classes/user_class.php';
 
 
-function register_user_ctr($name, $email, $password, $phone_number, $role, $country, $city)
+function register_user_ctr($name, $email, $password, $phone_number, $role, $country, $city, $image = null)
 {
     $user = new User();
-    $user_id = $user->createUser($name, $email, $password, $phone_number, $role, $country, $city);
+    $user_id = $user->createUser($name, $email, $password, $phone_number, $role, $country, $city, $image);
     if ($user_id) {
         return $user_id;
     }

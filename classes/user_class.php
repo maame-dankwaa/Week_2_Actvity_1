@@ -45,11 +45,11 @@ class User extends db_connection
         }
     }
 
-    public function createUser($name, $email, $password, $phone_number, $role)
+    public function createUser($name, $email, $password, $phone_number, $role, $country, $city, $image = null)
     {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        $stmt = $this->db->prepare("INSERT INTO customer (customer_name, customer_email, customer_pass, customer_contact, user_role) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssi", $name, $email, $hashed_password, $phone_number, $role);
+        $stmt = $this->db->prepare("INSERT INTO customer (customer_name, customer_email, customer_pass, customer_country, customer_city, customer_contact, customer_image, user_role) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssssssi", $name, $email, $hashed_password, $country, $city, $phone_number, $image, $role);
         if ($stmt->execute()) {
             return $this->db->insert_id;
         }

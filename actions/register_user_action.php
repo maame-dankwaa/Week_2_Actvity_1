@@ -52,7 +52,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 // keep your original call style; controller should expose this function
 // adjust signature to include country, city, (and optional image)
-$user_id = register_user_ctr($name, $email, $password, $phone_number, $role, $country, $city, $image);
+$user_id = register_user_ctr($name, $email, $password, $phone_number, $role, $country, $city);
 
 if ($user_id) {
     $response['status']  = 'success';

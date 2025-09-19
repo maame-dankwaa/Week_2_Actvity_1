@@ -149,8 +149,46 @@
                                 <input type="password" class="form-control animate__animated animate__fadeInUp" id="password" name="password" autocomplete="new-password" required>
                             </div>
                             <div class="mb-3">
-                             
-</body>
+                                <label for="country" class="form-label">Country <i class="fa fa-globe"></i></label>
+                                <input type="text" class="form-control animate__animated animate__fadeInUp" id="country" name="country" autocomplete="country" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="city" class="form-label">City <i class="fa fa-city"></i></label>
+                                <input type="text" class="form-control animate__animated animate__fadeInUp" id="city" name="city" autocomplete="address-level2" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone_number" class="form-label">Phone Number <i class="fa fa-phone"></i></label>
+                                <input type="tel" class="form-control animate__animated animate__fadeInUp" id="phone_number" name="phone_number" autocomplete="tel" required>
+                            </div>
+                            <fieldset class="mb-4">
+                                <legend class="form-label">Register As</legend>
+                                <div class="d-flex justify-content-start">
+                                    <div class="form-check me-3 custom-radio">
+                                        <input class="form-check-input" type="radio" name="role" id="customer" value="1" checked>
+                                        <label class="form-check-label" for="customer">Customer</label>
+                                    </div>
+                                    <div class="form-check custom-radio">
+                                        <input class="form-check-input" type="radio" name="role" id="owner" value="2">
+                                        <label class="form-check-label" for="owner">Restaurant Owner</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <button type="submit" class="btn btn-custom w-100 animate-pulse-custom">Register</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        Already have an account? <a href="login.php" class="highlight">Login here</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/register.js">
+    </script>
+</body>
 
 </html>
